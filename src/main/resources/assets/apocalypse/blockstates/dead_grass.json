@@ -1,0 +1,16 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "bottom": "apocalypse:blocks/dried_dirt",
+      "top": "apocalypse:blocks/dead_grass_top",
+      "side": "apocalypse:blocks/dead_grass_side",
+      "overlay": "apocalypse:blocks/dead_grass_overlay"
+    },
+    "model": "grass_normal",
+    "uvlock": true
+  },
+  "variants": {
+    "normal": [{}]
+  }
+}

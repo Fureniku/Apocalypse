@@ -1,0 +1,36 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "apocalypse:blocks/generator_core_frame",
+		"1": "apocalypse:blocks/generator_core_glass",
+		"particle": "apocalypse:blocks/generator_core_frame"
+	},
+	"elements": [
+		{
+			"name": "Glass",
+			"from": [0, 0, 2],
+			"to": [14, 16, 16],
+			"faces": {
+				"north": {"uv": [1, 0, 15, 16], "texture": "#1"},
+				"east": {"uv": [1, 0, 15, 16], "texture": "#1"},
+				"south": {"uv": [0, 0, 14, 16], "texture": "#1"},
+				"west": {"uv": [2, 0, 16, 16], "texture": "#1"},
+				"up": {"uv": [0, 2, 14, 16], "texture": "#1"},
+				"down": {"uv": [0, 0, 14, 14], "texture": "#1"}
+			}
+		},
+		{
+			"from": [14, 0, 0],
+			"to": [16, 16, 2],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 22, -6]},
+			"faces": {
+				"north": {"uv": [0, 0, 2, 16], "texture": "#0"},
+				"east": {"uv": [14, 0, 16, 16], "texture": "#0"},
+				"south": {"uv": [14, 0, 16, 16], "texture": "#0"},
+				"west": {"uv": [0, 0, 2, 16], "texture": "#0"},
+				"up": {"uv": [14, 0, 16, 2], "texture": "#0"},
+				"down": {"uv": [14, 14, 16, 16], "texture": "#0"}
+			}
+		}
+	]
+}

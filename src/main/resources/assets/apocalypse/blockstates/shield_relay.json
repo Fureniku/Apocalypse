@@ -1,0 +1,14 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {},
+    "model": "apocalypse:shield_relay",
+    "uvlock": true
+  },
+  "variants": {
+    "facing=north": { "model": "apocalypse:shield_relay" },
+    "facing=east":  { "model": "apocalypse:shield_relay", "y": 90 },
+    "facing=south": { "model": "apocalypse:shield_relay", "y": 180 },
+    "facing=west":  { "model": "apocalypse:shield_relay", "y": 270 }
+  }
+}
