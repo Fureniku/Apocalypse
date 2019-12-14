@@ -1,6 +1,6 @@
 package com.silvaniastudios.apocalypse.world.biomes;
 
-import com.silvaniastudios.apocalypse.blocks.ApocBlocks;
+import com.silvaniastudios.apocalypse.ApocBlocks;
 import com.silvaniastudios.apocalypse.world.ApocalypseBiomes;
 
 import net.minecraft.world.biome.BiomeForest;

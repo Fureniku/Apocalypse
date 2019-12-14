@@ -3,16 +3,16 @@ package com.silvaniastudios.apocalypse;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.Logger;
 
-import com.silvaniastudios.apocalypse.blocks.ApocBlocks;
 import com.silvaniastudios.apocalypse.items.ApocItems;
 import com.silvaniastudios.apocalypse.world.ApocalypseBiomes;
-import com.silvaniastudios.apocalypse.world.WorldTypeApocalypse;
 
 import net.minecraft.block.Block;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import net.minecraft.world.WorldType;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -32,20 +32,32 @@ public class Apocalypse {
 	
 	@SidedProxy(clientSide = "com.silvaniastudios.apocalypse.client.ClientProxy", serverSide = "com.silvaniastudios.apocalypse.CommonProxy")
 	public static CommonProxy proxy;
+	
+	public static CreativeTabs tabApoc = new CreativeTabs("tabApoc") {
+		@Override
+		public ItemStack getTabIconItem() {
+			return new ItemStack(ApocBlocks.dead_oak, 1, 0);
+		}
+	};
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		logger = event.getModLog();
+		FluidRegistry.registerFluid(ApocFluids.polluted_water_fluid);
 	}
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
-		ApocalypseBiomes.registerBiomes();
+		if (ApocConfig.world.enableWorldType) {
+			ApocalypseBiomes.registerBiomes();
+		}
 	}
 	
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
-		WorldType APOCALYPSE = new WorldTypeApocalypse();
+		if (ApocConfig.world.enableWorldType) {
+			//WorldType APOCALYPSE = new WorldTypeApocalypse();
+		}
 	}
 	
 	@Mod.EventBusSubscriber

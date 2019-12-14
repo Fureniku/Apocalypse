@@ -1,0 +1,20 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"textures": {
+			"end": "apocalypse:blocks/log_dead_oak_top",
+        	"side": "apocalypse:blocks/log_dead_oak",
+        	"all": "apocalypse:blocks/log_dead_oak"
+		},
+		"model": "cube_column"
+	},
+    "variants": {
+    	"axis":
+    	{
+	        "y":  {},
+	        "z":   { "x": 90 },
+	        "x":   { "x": 90, "y": 90 },
+	        "none": { "model": "cube_all" }
+        }
+    }
+}

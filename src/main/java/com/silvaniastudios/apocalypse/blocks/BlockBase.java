@@ -24,6 +24,7 @@ public class BlockBase extends Block {
 		super(materialIn);
 		setUnlocalizedName(Apocalypse.MODID + "." + name);
 		setRegistryName(name);
+		setCreativeTab(Apocalypse.tabApoc);
 	}
 	
 	public void registerItemModel(Item itemBlock) {
