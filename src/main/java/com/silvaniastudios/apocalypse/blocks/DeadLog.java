@@ -25,7 +25,7 @@ public class DeadLog extends BlockLog {
 		this.name = name;
 		setUnlocalizedName(Apocalypse.MODID + "." + name);
 		setRegistryName(name);
-		setCreativeTab(Apocalypse.tabApoc);
+		setCreativeTab(Apocalypse.tabApocBlocks);
 		setDefaultState(blockState.getBaseState().withProperty(LOG_AXIS, BlockLog.EnumAxis.Y));
 	}
 	

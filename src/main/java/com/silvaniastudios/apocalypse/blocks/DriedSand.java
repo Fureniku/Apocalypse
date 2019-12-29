@@ -23,7 +23,7 @@ public class DriedSand extends BlockFalling {
 		this.name = name;
 		setUnlocalizedName(Apocalypse.MODID + "." + name);
 		setRegistryName(name);
-		setCreativeTab(Apocalypse.tabApoc);
+		setCreativeTab(Apocalypse.tabApocBlocks);
 	}
 	
 	public void registerItemModel(Item itemBlock) {

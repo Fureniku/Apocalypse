@@ -25,7 +25,7 @@ public class BlockPollutedWater extends BlockFluidClassic {
 		super(fluid, Material.WATER);
 		setUnlocalizedName(Apocalypse.MODID + "." + name);
 		setRegistryName(name);
-		setCreativeTab(Apocalypse.tabApoc);
+		setCreativeTab(Apocalypse.tabApocBlocks);
 	}
 	
 	public void registerItemModel(Item itemBlock) {

@@ -11,6 +11,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
@@ -33,10 +34,17 @@ public class Apocalypse {
 	@SidedProxy(clientSide = "com.silvaniastudios.apocalypse.client.ClientProxy", serverSide = "com.silvaniastudios.apocalypse.CommonProxy")
 	public static CommonProxy proxy;
 	
-	public static CreativeTabs tabApoc = new CreativeTabs("tabApoc") {
+	public static CreativeTabs tabApocBlocks = new CreativeTabs("tabApocBlocks") {
 		@Override
 		public ItemStack getTabIconItem() {
 			return new ItemStack(ApocBlocks.dead_oak, 1, 0);
+		}
+	};
+	
+	public static CreativeTabs tabApocMachines = new CreativeTabs("tabApocMachines") {
+		@Override
+		public ItemStack getTabIconItem() {
+			return new ItemStack(ApocBlocks.shield_relay, 1, 0);
 		}
 	};
 
@@ -51,6 +59,7 @@ public class Apocalypse {
 		if (ApocConfig.world.enableWorldType) {
 			ApocalypseBiomes.registerBiomes();
 		}
+		MinecraftForge.EVENT_BUS.register(new HandlerOfEvents());
 	}
 	
 	@EventHandler

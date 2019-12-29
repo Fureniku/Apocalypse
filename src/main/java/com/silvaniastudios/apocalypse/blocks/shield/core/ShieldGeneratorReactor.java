@@ -1,4 +1,6 @@
-package com.silvaniastudios.apocalypse.blocks.shield;
+package com.silvaniastudios.apocalypse.blocks.shield.core;
+
+import com.silvaniastudios.apocalypse.blocks.shield.ShieldPartBase;
 
 public class ShieldGeneratorReactor extends ShieldPartBase {
 

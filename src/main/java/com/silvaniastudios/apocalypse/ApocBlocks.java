@@ -6,6 +6,7 @@ import com.silvaniastudios.apocalypse.blocks.DeadLog;
 import com.silvaniastudios.apocalypse.blocks.DriedDirt;
 import com.silvaniastudios.apocalypse.blocks.DriedSand;
 import com.silvaniastudios.apocalypse.blocks.fluids.BlockPollutedWater;
+import com.silvaniastudios.apocalypse.blocks.shield.FakeBlock;
 import com.silvaniastudios.apocalypse.blocks.shield.ShieldRelayBlock;
 
 import net.minecraft.block.Block;
@@ -36,6 +37,7 @@ public class ApocBlocks {
 	public static DeadCrop dead_melon_stem = new DeadCrop("dead_melon_stem");
 	public static DeadCrop dead_pumpkin_stem = new DeadCrop("dead_pumpkin_stem");
 	
+	public static FakeBlock fake_block = new FakeBlock("fake_block");
 	//public static PersonalShieldGen personal_shield_generator = new PersonalShieldGen("personal_shield_generator");
 	//public static ShieldSystemCore shield_system_core = new ShieldSystemCore("shield_system_core");
 	public static ShieldRelayBlock shield_relay = new ShieldRelayBlock("shield_relay");
@@ -58,6 +60,8 @@ public class ApocBlocks {
 				dead_acacia,
 				dead_dark_oak,
 				
+				fake_block,
+				
 				shield_relay,
 				
 				polluted_water
@@ -76,6 +80,7 @@ public class ApocBlocks {
 		registry.register(new ItemBlock(dead_acacia).setRegistryName(dead_acacia.getRegistryName()));
 		registry.register(new ItemBlock(dead_dark_oak).setRegistryName(dead_dark_oak.getRegistryName()));
 		
+		registry.register(new ItemBlock(fake_block).setRegistryName(fake_block.getRegistryName()));
 		registry.register(new ItemBlock(shield_relay).setRegistryName(shield_relay.getRegistryName()));
 		
 		registry.register(new ItemBlock(polluted_water).setRegistryName(polluted_water.getRegistryName()));
@@ -93,6 +98,7 @@ public class ApocBlocks {
 		dead_acacia.initModel();
 		dead_dark_oak.initModel();
 		
+		fake_block.initModel();
 		shield_relay.initModel();
 		
 		polluted_water.initModel();
